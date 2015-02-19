@@ -1,0 +1,10 @@
+# Generated files
+**/platforms/android/ant-build
+**/platforms/android/ant-gen
+
+# Mac OS default file
+.DS_Store
+
+# IntelliJ specific files
+**/.idea/workspace.xml
+**/.idea/tasks.xml
