@@ -20,7 +20,7 @@ var newsList = [{
 // pageinit event for first page
 // triggers only once
 // In Android $(document).on fires twice, so use $(document).one
-$(document).on("pageinit", "#news-list-page", function () {
+$(document).on("pageinit", "#newsListPage", function () {
 
     //// Set up string for adding <li/>
     //var li = "";

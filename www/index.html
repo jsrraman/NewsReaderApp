@@ -47,8 +47,21 @@
 <!--</div>-->
 
 <!-- Home Page -->
-<div data-role="page" data-theme="a" id="news-list-page">
+<div data-role="page" data-theme="a" id="newsListPage">
+
+    <!-- Create a left panel (side menu) -->
+    <div data-role="panel" id="leftPanel">
+        <ul data-role ="listview">
+            <li>Read Now</li>
+            <li>My Library</li>
+            <li>Bookmarks</li>
+            <li>Explore</li>
+        </ul>
+    </div>
+
     <div data-role="header" data-theme="a">
+        <!-- Link for left panel (side menu) -->
+        <a href="#leftPanel" data-icon="bars" data-iconpos="notext"></a>
         <h1>News List</h1>
     </div>
 
@@ -60,12 +73,13 @@
     <!--</div>-->
 
     <!--<div data-role="content">-->
+    <div data-role="main" class="ui-content">
         <div class="ui-grid-b ui-responsive">
             <div class="ui-block-a" id="uiBlockA"></div>
             <div class="ui-block-b" id="uiBlockB"></div>
             <div class="ui-block-c" id="uiBlockC"></div>
         </div>
-    <!--</div>-->
+    </div>
 
 </div>
 

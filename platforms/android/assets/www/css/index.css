@@ -41,7 +41,10 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
+    /* Rajaraman - S */
+    /*text-transform:uppercase;*/
+    text-transform:none;
+    /* Rajaraman - E */
     width:100%;
 }
 
