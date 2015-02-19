@@ -29,14 +29,13 @@
           content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <link rel="stylesheet" href="css/lib/jquery.mobile.min.css"/>
+    <link rel="stylesheet" href="css/card.css"/>
     <script src="js/lib/jquery.min.js"></script>
     <script src="js/lib/jquery.mobile.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
-    <title>Hello World</title>
+    <script type="text/javascript" src="js/ui-helper.js"></script>
+    <title>News List</title>
 </head>
 <body>
 <!--<div class="app">-->
@@ -47,33 +46,28 @@
 <!--</div>-->
 <!--</div>-->
 
-<div data-role="page" data-theme="a" id="containerPage">
-
-    <!--<div data-role="header" id="hdrNewsContentListView" data-nobackbtn="true">-->
-    <!--<h1>News</h1>-->
-    <!--</div>&lt;!&ndash; /header &ndash;&gt;-->
-
-    <div data-role="content" id="newsContent">
-        <ul data-role="listview" id="newsContentListView" data-inset="true" data-theme="a" data-dividertheme="a">
-            <li>
-                <p>Text 1</p>
-                <p>Text 2</p>
-            </li>
-            <li>
-                <p>Text 1</p>
-                <p>Text 2</p>
-            </li>
-            <li>
-                <p>Text 1</p>
-                <p>Text 2</p>
-            </li>
-        </ul>
+<!-- Home Page -->
+<div data-role="page" data-theme="a" id="news-list-page">
+    <div data-role="header" data-theme="a">
+        <h1>News List</h1>
     </div>
-    <!-- /content -->
 
-    <!--<div data-role="footer" id="ftrCategories"></div>-->
+    <!--<div data-role="content">-->
+    <!--<ul data-role="listview" id="news-list-view" data-divider-theme="a" >-->
+    <!--<li data-role="list-divider" data-theme="a" >-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+
+    <!--<div data-role="content">-->
+        <div class="ui-grid-b ui-responsive">
+            <div class="ui-block-a" id="uiBlockA"></div>
+            <div class="ui-block-b" id="uiBlockB"></div>
+            <div class="ui-block-c" id="uiBlockC"></div>
+        </div>
+    <!--</div>-->
 
 </div>
-<!-- /page -->
+
 </body>
 </html>
