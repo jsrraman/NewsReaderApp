@@ -30,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <link rel="stylesheet" href="css/lib/jquery.mobile.min.css"/>
     <link rel="stylesheet" href="css/card.css"/>
+    <link rel="stylesheet" href="css/navigation-bar.css"/>
     <script type="text/javascript" src="js/lib/jquery.min.js"></script>
     <script type="text/javascript" src="js/lib/jquery.mobile.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
@@ -50,8 +51,10 @@
 <div data-role="page" data-theme="a" id="newsListPage">
 
     <!-- Create a left panel (side menu) -->
-    <div data-role="panel" id="leftPanel">
-        <ul data-role ="listview">
+    <div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="leftPanel"
+         data-theme="a">
+
+        <ul data-role="listview">
             <li>Read Now</li>
             <li>My Library</li>
             <li>Bookmarks</li>
@@ -62,16 +65,22 @@
     <div data-role="header" data-theme="a">
         <!-- Link for left panel (side menu) -->
         <a href="#leftPanel" data-icon="bars" data-iconpos="notext"></a>
+
         <h1>News List</h1>
     </div>
 
-    <!--<div data-role="content">-->
-    <!--<ul data-role="listview" id="news-list-view" data-divider-theme="a" >-->
-    <!--<li data-role="list-divider" data-theme="a" >-->
-    <!--</li>-->
-    <!--</ul>-->
-    <!--</div>-->
+    <!-- Container for showing the selected navigation bar item -->
+    <div>
+        <p align="center" id="selNavigationBarContent"></p>
+    </div>
 
+    <div id="customNavbar">
+        <div data-role="navbar" onclick="scrollCustomNavBar()">
+            <ul id="customNavbarList">
+                <li>Highlights</li>
+            </ul>
+        </div>
+    </div>
     <!--<div data-role="content">-->
     <div data-role="main" class="ui-content">
         <div class="ui-grid-b ui-responsive">

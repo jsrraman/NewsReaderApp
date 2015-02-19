@@ -42,6 +42,7 @@ body {
     margin:0px;
     padding:0px;
     /* Rajaraman - S */
+    /* Refer - http://stackoverflow.com/questions/14345156/jquery-mobile-phonegap-on-android-all-text-shows-in-caps */
     /*text-transform:uppercase;*/
     text-transform:none;
     /* Rajaraman - E */

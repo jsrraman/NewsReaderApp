@@ -1,3 +1,7 @@
+// Navigation bar items
+var navigationBarItems = ["News", "Business", "Technology", "Science", "Sports", "Entertainment"];
+
+// News items
 var newsList = [{
     "id": 0,
     "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
@@ -56,6 +60,7 @@ $(document).on("pageinit", "#newsListPage", function () {
     //    $(this).listview("refresh");
     //});
 
+    initNavigationBar();
     createCards();
 });
 
@@ -83,6 +88,19 @@ $(document).on("pagebeforeshow", "#details-page", function () {
 });
 
 
+function initNavigationBar() {
+    //var myNavBar = $('div', {
+    //    'data-role':'navbar',
+    //    'html':'<ul><li><a id="some">First</a></li></ul>'
+    //}).appendTo("#newsListPage").navbar();
+
+    for (var i = 0; i < navigationBarItems.length; i++) {
+        $("<li/>")
+            .text(navigationBarItems[i])
+            .appendTo($("#customNavbarList"));
+    }
+}
+
 // function to create the cards
 function createCards() {
 
@@ -93,15 +111,6 @@ function createCards() {
         i,
         j = 1,
         tag;
-
-    //// the cards, in this example in an array
-    //    imagename = ["Image1", "Image2", "Image3"],
-    //    imagesource = ["http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
-    //                    "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
-    //                    "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg"],
-    //    title = ["Title", "Title", "Title"],
-    //    text = ["The truth about NASA’s moon exploration", "Lorem ipsum part 2...", "Lorem ipsum part 3..."];
-    //
 
     // Clear the current grid
     uiBlockA.empty();
@@ -160,6 +169,10 @@ function createCards() {
             uiBlockC.append(tag);
         }
     });
+}
+
+function scrollCustomNavBar() {
+
 }
 
 // press effect card ui
