@@ -28,16 +28,17 @@
     <meta name="viewport"
           content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
-    <link rel="stylesheet" href="css/lib/jquery.mobile.min.css"/>
-    <link rel="stylesheet" href="css/card.css"/>
-    <link rel="stylesheet" href="css/header-scroll.css"/>
-
+    <link rel="stylesheet" type="text/css" href="css/lib/jquery.mobile.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/card.css"/>
+    <link rel="stylesheet" type="text/css" href="css/navigation-header-scroll.css"/>
 
     <script type="text/javascript" src="js/lib/jquery.min.js"></script>
     <script type="text/javascript" src="js/lib/jquery.mobile.min.js"></script>
+    <script type="text/javascript" src="js/lib/purl.js"></script>
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/ui-helper.js"></script>
     <title>News List</title>
 </head>
@@ -72,41 +73,11 @@
     </div>
 
 
-    <div class="scroll-horizontal" data-role="header" data-theme="a">
-        <ul class="scroll-horizontal">
-            <!--<li id="link"><a href="#type=colleges"><span>Colleges</span></a></li>-->
-            <!--<li><a href="#"><span>Campuses</span></a></li>-->
-            <!--<li><a href="#"><span>Faculty and Staff</span></a></li>-->
-            <!--<li><a href="#"><span>Of Interest</span></a></li>-->
-            <!--<li><a href="#"><span>Photos</span></a></li>-->
-            <!--<li><a href="#"><span>Video</span></a></li>-->
-            <!--<li><a href="#"><span>Newswire Subscription</span></a></li>-->
-            <!--<li><a href="#"><span>PSUTXT</span></a></li>-->
-
-            <li>Highlights</li>
-            <li>News</li>
-            <li>Business</li>
-            <li>Technology</li>
-            <li>Science</li>
-            <li>Sports</li>
-            <li>Entertainment</li>
+    <div class="hscroll-header" data-role="header" data-theme="a">
+        <ul class="hscroll-list">
         </ul>
     </div>
 
-    <!-- Container for showing the selected navigation bar item -->
-    <div>
-        <p align="center" id="selNavigationBarContent"></p>
-    </div>
-
-    <!--<div id="customNavbar" >-->
-    <!--<div data-role="navbar">-->
-    <!--<ul id="customNavbarList">-->
-    <!--<li>Highlights</li>-->
-    <!--</ul>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div data-role="content">-->
     <div data-role="main" class="ui-content">
         <div class="ui-grid-b ui-responsive">
             <div class="ui-block-a" id="uiBlockA"></div>
@@ -114,8 +85,6 @@
             <div class="ui-block-c" id="uiBlockC"></div>
         </div>
     </div>
-
-
 </div>
 
 </body>

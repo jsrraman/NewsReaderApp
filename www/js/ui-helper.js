@@ -2,66 +2,37 @@
 // triggers only once
 // In Android $(document).on fires twice, so use $(document).one
 $(document).one("pageinit", "#newsListPage", function () {
-
-    //// Set up string for adding <li/>
-    //var li = "";
-    //
-    //// Container for $li to be added
-    //$.each(headlinesList, function (index, newsItem) {
-    //    //add the <li> to "li" variable
-    //    //note the use of += in the variable
-    //    //meaning I'm adding to the existing data. not replacing it.
-    //    //store index value in array as id of the <a> tag
-    //    //li += '<li><a href="#" id="' + index + '" class="news-item">' + newsItem.summary + '</a></li>';
-    //    li += '<li>' + newsItem.summary + '</li>';
-    //});
-    //
-    //// Append list to ul
-    //$("#news-list-view").append(li).promise().done(function () {
-    //    // Wait for append to finish - thats why you use a promise()
-    //    // done() will run after append is done
-    //    // add the click event for the redirection to happen to #details-page
-    //    $(this).on("click", ".info-go", function (e) {
-    //        e.preventDefault();
-    //
-    //        //store the information in the next page's data
-    //        $("#details-page").data("info", info[this.id]);
-    //        //change the page # to second page.
-    //        //Now the URL in the address bar will read index.html#details-page
-    //        //where #details-page is the "id" of the second page
-    //        //we're gonna redirect to that now using changePage() method
-    //        $.mobile.changePage("#details-page");
-    //    });
-    //
-    //    //refresh list to enhance its styling.
-    //    $(this).listview("refresh");
-    //});
-
+    // Construct the navigation header
     constructNavigationHeader();
-    //showNewsCards(newsList);
+
+    // Show headlines news cards
+    showNewsCards(headlinesList);
 });
 
 //use pagebeforeshow
 //DONT USE PAGEINIT!
 //the reason is you want this to happen every single time
 //pageinit will happen only once
-$(document).on("pagebeforeshow", "#details-page", function () {
+$(document).on("pagebeforeshow", "#newsDetailPage", function (event, data) {
 
-    ////get from data - you put this here when the "a" wa clicked in the previous page
-    //var info = $(this).data("info");
-    ////string to put HTML in
-    //var info_view = "";
-    ////use for..in to iterate through object
-    //for (var key in info) {
-    //    //Im using grid layout here.
-    //    //use any kind of layout you want.
-    //    //key is the key of the property in the object
-    //    //if obj = {name: 'k'}
-    //    //key = name, value = k
-    //    info_view += '<div class="ui-grid-a"><div class="ui-block-a"><div class="ui-bar field" style="font-weight : bold; text-align: left;">' + key + '</div></div><div class="ui-block-b"><div class="ui-bar value" style="width : 75%">' + info[key] + '</div></div></div>';
-    //}
-    ////add this to html
-    //$(this).find("[data-role=content]").html(info_view);
+    // Get the passed data from the url parameters
+    var parameters = $(this).data("url").split("?")[1];
+    var parameterValueArray = parameters.split("&");
+
+    var thumbnailUrl = parameterValueArray[0].replace("thumbnailUrl=", "");
+    var detail = parameterValueArray[1].replace("detail=", "");
+
+    // Decode the URI component to get the proper string
+    detail = decodeURIComponent(detail);
+
+    //string to put HTML in
+    var htmlData = "";
+
+    htmlData += '<div class="global-image"><img src="' + thumbnailUrl + '" />' + '</div>';
+    htmlData += '<p>' +  detail + '</p>';
+
+    // Add the html data to the content area
+    $("#newsDetailContent").append(htmlData);
 });
 
 
@@ -96,10 +67,8 @@ function showNewsCards(newsList) {
 
     // declaring some variables
     var uiBlockA = $('#uiBlockA'), // cache the selector of the element, increases performance
-        uiBlockB = $('#uiBlockB'), // cache the selector of the element, increases performance
-        uiBlockC = $('#uiBlockC'), // cache the selector of the element, increases performance
-        i,
-        j = 1,
+        uiBlockB = $('#uiBlockB'),
+        uiBlockC = $('#uiBlockC'),
         tag;
 
     // Clear the current grid
@@ -109,8 +78,12 @@ function showNewsCards(newsList) {
 
     // Populate the values from headlinesList
     $.each(newsList, function (index, newsItem) {
-        // Construct the tag that goes into each card
-        tag = '<div class="card" id="card' + index + '">' +
+        // Construct the content that goes into each card
+
+        //tag = '<div class="card" id="card' + index + '">' +
+        var cardId = "card" + index;
+
+        tag = '<div class="card" id="' + cardId + '">' +
         '<div class="card-image"><img src="' + newsItem.thumbnailUrl + '" />' + '</div>' +
         '<p>' +  newsItem.summary + '</p>' +
         '</div>';
@@ -130,19 +103,19 @@ function showNewsCards(newsList) {
         } else if (index % 3 == 2) {
             uiBlockC.append(tag);
         }
+
+        setTransitionDetailsForCards(cardId, newsItem);
     });
 }
 
-// press effect card ui
-function pressEffectCard(x) {
-    var id = $("#" + x); // cache the selector of the element, increases performance
+function setTransitionDetailsForCards(id, newsItem) {
+
+    var id = $("#" + id); // cache the selector of the element, increases performance
+
     id.off('touchstart').on('touchstart', function () {
-        id.addClass("holoPressEffectDiv");
-    });
-    id.off('touchend').on('touchend', function () {
-        id.removeClass("holoPressEffectDiv");
-    });
-    id.off('touchmove').on('touchmove', function () {
-        id.removeClass("holoPressEffectDiv"); // to remove the press effect when there is a scroll detected in stead of a tap
+        $.mobile.changePage('news-detail.html', {
+            transition: "flip",
+            data: {"thumbnailUrl": newsItem.thumbnailUrl, "detail": encodeURIComponent(newsItem.detail)}
+        });
     });
 }
