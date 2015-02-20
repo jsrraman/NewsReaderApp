@@ -43,31 +43,79 @@ var headlinesList = [{
 var newsList = [{
     "category" : "News",
     "id": 1,
-    "thumbnailUrl": "http://c4.staticflickr.com/8/7569/15578888220_cd9b3d37df_b.jpg",
-    "summary": "The truth about NASA’s moon exploration",
-    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
+    "thumbnailUrl": "https://s.yimg.com/cd/resizer/2.0/FIT_TO_WIDTH-w500/234ccbee58a765cefd8fce7405bc68f98ff11023.jpg",
+    "summary": "Lenovo Has Been Selling Laptops with Malware Pre-Installed",
+    "detail": "Computer maker Lenovo has been shipping laptops prepackaged with malware that makes you more vulnerable to hackers — all for the sake of serving you advertisements. " +
+        "<br>" + "<br>" +
+    " Made by a company called “Superfish,” the software is essentially an Internet browser add-on that injects ads onto websites you visit."
 }, {
     "category" : "News",
     "id": 2,
-    "thumbnailUrl": "http://c4.staticflickr.com/8/7569/15578888220_cd9b3d37df_b.jpg",
-    "summary": "The truth about NASA’s moon exploration",
-    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
+    "thumbnailUrl": "https://s.yimg.com/cd/resizer/2.0/FIT_TO_WIDTH-w500/234ccbee58a765cefd8fce7405bc68f98ff11023.jpg",
+    "summary": "Lenovo Has Been Selling Laptops with Malware Pre-Installed",
+    "detail": "Computer maker Lenovo has been shipping laptops prepackaged with malware that makes you more vulnerable to hackers — all for the sake of serving you advertisements. " +
+    "<br>" + "<br>" +
+    " Made by a company called “Superfish,” the software is essentially an Internet browser add-on that injects ads onto websites you visit."
 },{
     "category" : "News",
     "id": 3,
-    "thumbnailUrl": "http://c4.staticflickr.com/8/7569/15578888220_cd9b3d37df_b.jpg",
-    "summary": "The truth about NASA’s moon exploration",
-    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
+    "thumbnailUrl": "https://s.yimg.com/cd/resizer/2.0/FIT_TO_WIDTH-w500/234ccbee58a765cefd8fce7405bc68f98ff11023.jpg",
+    "summary": "Lenovo Has Been Selling Laptops with Malware Pre-Installed",
+    "detail": "Computer maker Lenovo has been shipping laptops prepackaged with malware that makes you more vulnerable to hackers — all for the sake of serving you advertisements. " +
+    "<br>" + "<br>" +
+    " Made by a company called “Superfish,” the software is essentially an Internet browser add-on that injects ads onto websites you visit."
 },{
     "category" : "News",
     "id": 4,
-    "thumbnailUrl": "http://c4.staticflickr.com/8/7569/15578888220_cd9b3d37df_b.jpg",
-    "summary": "The truth about NASA’s moon exploration",
-    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
+    "thumbnailUrl": "https://s.yimg.com/cd/resizer/2.0/FIT_TO_WIDTH-w500/234ccbee58a765cefd8fce7405bc68f98ff11023.jpg",
+    "summary": "Lenovo Has Been Selling Laptops with Malware Pre-Installed",
+    "detail": "Computer maker Lenovo has been shipping laptops prepackaged with malware that makes you more vulnerable to hackers — all for the sake of serving you advertisements. " +
+    "<br>" + "<br>" +
+    " Made by a company called “Superfish,” the software is essentially an Internet browser add-on that injects ads onto websites you visit."
 },{
     "category" : "News",
+    "id": 1,
+    "thumbnailUrl": "https://s.yimg.com/cd/resizer/2.0/FIT_TO_WIDTH-w500/234ccbee58a765cefd8fce7405bc68f98ff11023.jpg",
+    "summary": "Lenovo Has Been Selling Laptops with Malware Pre-Installed",
+    "detail": "Computer maker Lenovo has been shipping laptops prepackaged with malware that makes you more vulnerable to hackers — all for the sake of serving you advertisements. " +
+    "<br>" + "<br>" +
+    " Made by a company called “Superfish,” the software is essentially an Internet browser add-on that injects ads onto websites you visit."
+}];
+
+// Business
+var businessList = [{
+    "category" : "Business",
+    "id": 1,
+    "thumbnailUrl": "http://www.moneycontrol.com/news_image_files/2014/356x200/b/Budget2014_arun_jaitley10_356x200_3938_356.jpg",
+    "summary": "India's gold imports may rise to 35-40 tonnes in February",
+    "detail": "India's gold imports are likely to rise to 35-40 tonnes in the current month as compared to 26 tonnes in the corresponding period last year, according to gold and silver refiner." +
+    "The country has already imported 23.2 tonnes of gold in the first fortnight of this month. Total shipments at the end of the month could reach 35-40 tonnes."
+}, {
+    "category" : "Business",
+    "id": 2,
+    "thumbnailUrl": "http://www.moneycontrol.com/news_image_files/2014/356x200/b/Budget2014_arun_jaitley10_356x200_3938_356.jpg",
+    "summary": "India's gold imports may rise to 35-40 tonnes in February",
+    "detail": "India's gold imports are likely to rise to 35-40 tonnes in the current month as compared to 26 tonnes in the corresponding period last year, according to gold and silver refiner." +
+    "The country has already imported 23.2 tonnes of gold in the first fortnight of this month. Total shipments at the end of the month could reach 35-40 tonnes."
+},{
+    "category" : "Business",
+    "id": 3,
+    "thumbnailUrl": "http://www.moneycontrol.com/news_image_files/2014/356x200/b/Budget2014_arun_jaitley10_356x200_3938_356.jpg",
+    "summary": "India's gold imports may rise to 35-40 tonnes in February",
+    "detail": "India's gold imports are likely to rise to 35-40 tonnes in the current month as compared to 26 tonnes in the corresponding period last year, according to gold and silver refiner." +
+    "The country has already imported 23.2 tonnes of gold in the first fortnight of this month. Total shipments at the end of the month could reach 35-40 tonnes."
+},{
+    "category" : "Business",
+    "id": 4,
+    "thumbnailUrl": "http://www.moneycontrol.com/news_image_files/2014/356x200/b/Budget2014_arun_jaitley10_356x200_3938_356.jpg",
+    "summary": "India's gold imports may rise to 35-40 tonnes in February",
+    "detail": "India's gold imports are likely to rise to 35-40 tonnes in the current month as compared to 26 tonnes in the corresponding period last year, according to gold and silver refiner." +
+    "The country has already imported 23.2 tonnes of gold in the first fortnight of this month. Total shipments at the end of the month could reach 35-40 tonnes."
+},{
+    "category" : "Business",
     "id": 5,
-    "thumbnailUrl": "http://c4.staticflickr.com/8/7569/15578888220_cd9b3d37df_b.jpg",
-    "summary": "The truth about NASA’s moon exploration",
-    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
+    "thumbnailUrl": "http://www.moneycontrol.com/news_image_files/2014/356x200/b/Budget2014_arun_jaitley10_356x200_3938_356.jpg",
+    "summary": "India's gold imports may rise to 35-40 tonnes in February",
+    "detail": "India's gold imports are likely to rise to 35-40 tonnes in the current month as compared to 26 tonnes in the corresponding period last year, according to gold and silver refiner." +
+    "The country has already imported 23.2 tonnes of gold in the first fortnight of this month. Total shipments at the end of the month could reach 35-40 tonnes."
 }];

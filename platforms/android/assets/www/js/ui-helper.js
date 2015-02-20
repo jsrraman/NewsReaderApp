@@ -1,18 +1,14 @@
-// pageinit event for first page
-// triggers only once
+// Construct the news list page's UI elements during its initialization
 // In Android $(document).on fires twice, so use $(document).one
 $(document).one("pageinit", "#newsListPage", function () {
-    // Construct the navigation header
+    // Construct the news header items
     constructNavigationHeader();
 
-    // Show headlines news cards
-    showNewsCards(headlinesList);
+    // Show headlines news cards as default news
+    showNewsCards(headlinesList, "Headlines");
 });
 
-//use pagebeforeshow
-//DONT USE PAGEINIT!
-//the reason is you want this to happen every single time
-//pageinit will happen only once
+// Construct the news detail page before it is displayed
 $(document).on("pagebeforeshow", "#newsDetailPage", function (event, data) {
 
     // Get the passed data from the url parameters
@@ -48,22 +44,32 @@ function constructNavigationHeader() {
     // Show news cards based on the list item clicked
     $(".hscroll-list li").on("click", function(event){
 
+        $(this).addClass('animated shake');
+
         var headerItem = $(this).text();
 
         if (headerItem == "Headlines")
-            showNewsCards(headlinesList);
+            showNewsCards(headlinesList, headerItem);
         else if(headerItem == "News")
-            showNewsCards(newsList);
+            showNewsCards(newsList, headerItem);
+        else if(headerItem == "Business")
+            showNewsCards(businessList, headerItem);
+        else
+            showNewsCards(headlinesList, headerItem);
     });
 }
 
 // function to create the cards
-function showNewsCards(newsList) {
+function showNewsCards(newsList, titleText) {
 
     // If newsList point it to the default news list
     if (!newsList) {
         newsList = headlinesList;
     }
+
+    // Reflect the header title with the current selected news list
+    // html() is equivalent to innerHTML but guaranteed to work across browsers
+    $("#newsListHeader > h1").html(titleText);
 
     // declaring some variables
     var uiBlockA = $('#uiBlockA'), // cache the selector of the element, increases performance
@@ -78,9 +84,8 @@ function showNewsCards(newsList) {
 
     // Populate the values from headlinesList
     $.each(newsList, function (index, newsItem) {
-        // Construct the content that goes into each card
 
-        //tag = '<div class="card" id="card' + index + '">' +
+        // Construct the content that goes into each card
         var cardId = "card" + index;
 
         tag = '<div class="card" id="' + cardId + '">' +
@@ -88,7 +93,7 @@ function showNewsCards(newsList) {
         '<p>' +  newsItem.summary + '</p>' +
         '</div>';
 
-        // You will need to create cards in a special order.
+        // The cards are in 33%, 33% and 33% layout, so we will need to create cards in the following order
         // The first 1/3 of the cards are placed in block A.
         // The second 1/3 of the cards are placed in block B.
         // The last 1/3 of the cards are placed in block C.
@@ -112,7 +117,7 @@ function setTransitionDetailsForCards(id, newsItem) {
 
     var id = $("#" + id); // cache the selector of the element, increases performance
 
-    id.off('touchstart').on('touchstart', function () {
+    id.off('click').on('click', function () {
         $.mobile.changePage('news-detail.html', {
             transition: "flip",
             data: {"thumbnailUrl": newsItem.thumbnailUrl, "detail": encodeURIComponent(newsItem.detail)}

@@ -5,7 +5,7 @@ $(document).one("pageinit", "#newsListPage", function () {
     constructNavigationHeader();
 
     // Show headlines news cards as default news
-    showNewsCards(headlinesList);
+    showNewsCards(headlinesList, "Headlines");
 });
 
 // Construct the news detail page before it is displayed
@@ -44,24 +44,32 @@ function constructNavigationHeader() {
     // Show news cards based on the list item clicked
     $(".hscroll-list li").on("click", function(event){
 
+        $(this).addClass('animated shake');
+
         var headerItem = $(this).text();
 
         if (headerItem == "Headlines")
-            showNewsCards(headlinesList);
+            showNewsCards(headlinesList, headerItem);
         else if(headerItem == "News")
-            showNewsCards(newsList);
+            showNewsCards(newsList, headerItem);
         else if(headerItem == "Business")
-            showNewsCards(businessList);
+            showNewsCards(businessList, headerItem);
+        else
+            showNewsCards(headlinesList, headerItem);
     });
 }
 
 // function to create the cards
-function showNewsCards(newsList) {
+function showNewsCards(newsList, titleText) {
 
     // If newsList point it to the default news list
     if (!newsList) {
         newsList = headlinesList;
     }
+
+    // Reflect the header title with the current selected news list
+    // html() is equivalent to innerHTML but guaranteed to work across browsers
+    $("#newsListHeader > h1").html(titleText);
 
     // declaring some variables
     var uiBlockA = $('#uiBlockA'), // cache the selector of the element, increases performance
@@ -109,7 +117,7 @@ function setTransitionDetailsForCards(id, newsItem) {
 
     var id = $("#" + id); // cache the selector of the element, increases performance
 
-    id.off('touchstart').on('touchstart', function () {
+    id.off('click').on('click', function () {
         $.mobile.changePage('news-detail.html', {
             transition: "flip",
             data: {"thumbnailUrl": newsItem.thumbnailUrl, "detail": encodeURIComponent(newsItem.detail)}
