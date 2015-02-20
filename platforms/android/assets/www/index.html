@@ -30,9 +30,12 @@
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <link rel="stylesheet" href="css/lib/jquery.mobile.min.css"/>
     <link rel="stylesheet" href="css/card.css"/>
-    <link rel="stylesheet" href="css/navigation-bar.css"/>
+    <link rel="stylesheet" href="css/header-scroll.css"/>
+
+
     <script type="text/javascript" src="js/lib/jquery.min.js"></script>
     <script type="text/javascript" src="js/lib/jquery.mobile.min.js"></script>
+
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/ui-helper.js"></script>
@@ -65,8 +68,29 @@
     <div data-role="header" data-theme="a">
         <!-- Link for left panel (side menu) -->
         <a href="#leftPanel" data-icon="bars" data-iconpos="notext"></a>
-
         <h1>News List</h1>
+    </div>
+
+
+    <div class="scroll-horizontal" data-role="header" data-theme="a">
+        <ul class="scroll-horizontal">
+            <!--<li id="link"><a href="#type=colleges"><span>Colleges</span></a></li>-->
+            <!--<li><a href="#"><span>Campuses</span></a></li>-->
+            <!--<li><a href="#"><span>Faculty and Staff</span></a></li>-->
+            <!--<li><a href="#"><span>Of Interest</span></a></li>-->
+            <!--<li><a href="#"><span>Photos</span></a></li>-->
+            <!--<li><a href="#"><span>Video</span></a></li>-->
+            <!--<li><a href="#"><span>Newswire Subscription</span></a></li>-->
+            <!--<li><a href="#"><span>PSUTXT</span></a></li>-->
+
+            <li>Highlights</li>
+            <li>News</li>
+            <li>Business</li>
+            <li>Technology</li>
+            <li>Science</li>
+            <li>Sports</li>
+            <li>Entertainment</li>
+        </ul>
     </div>
 
     <!-- Container for showing the selected navigation bar item -->
@@ -74,22 +98,14 @@
         <p align="center" id="selNavigationBarContent"></p>
     </div>
 
-    <div id="customNavbar">
-        <div data-role="navbar" onclick="scrollCustomNavbar()">
-            <ul id="customNavbarList">
-                <li><a href="1.html">Highlights</a></li>
-                <li><a href="2.html">News</a></li>
-                <li><a href="3.html">Business</a></li>
-                <li><a href="4.html">Technology</a></li>
-                <li><a href="5.html">Item 5</a></li>
-                <!--<li><a href="6.html">Two</a></li>-->
-                <!--<li><a href="7.html">One</a></li>-->
-                <!--<li><a href="8.html">Two</a></li>-->
-                <!--<li><a href="9.html">One</a></li>-->
-                <!--<li><a href="10.html">Two</a></li>-->
-            </ul>
-        </div>
-    </div>
+    <!--<div id="customNavbar" >-->
+    <!--<div data-role="navbar">-->
+    <!--<ul id="customNavbarList">-->
+    <!--<li>Highlights</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+
     <!--<div data-role="content">-->
     <div data-role="main" class="ui-content">
         <div class="ui-grid-b ui-responsive">
@@ -98,6 +114,7 @@
             <div class="ui-block-c" id="uiBlockC"></div>
         </div>
     </div>
+
 
 </div>
 

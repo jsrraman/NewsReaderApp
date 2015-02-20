@@ -1,31 +1,34 @@
-div.sc_menu {
-    /* Set it so we could calculate the offsetLeft */
+div.scroll-horizontal {
     position: relative;
     /*height: 145px;*/
     /*width: 300px;*/
     overflow: auto;
+    background: none;
 }
-ul.sc_menu {
+
+.scroll-horizontal.ui-header.ui-bar-a {}
+
+ul.scroll-horizontal {
     display: block;
     /*height: 110px;*/
-    /* max width here, for users without javascript */
-    width: 1500px;
-    padding: 5px 5px 5px 5px;
-    /* removing default styling */
+    width: 750px;
+    padding: 10px 10px 10px 10px;
     margin: 0;
-    background: url('navigation.png');
     list-style: none;
 }
-.sc_menu li {
+
+.scroll-horizontal li {
     display: block;
     float: left;
     padding: 0 4px 4px;
 }
-.sc_menu a {
+
+.scroll-horizontal a {
     display: block;
     text-decoration: none;
 }
-.sc_menu span {
+
+.scroll-horizontal span {
     /* display: none; */
     margin-top: 3px;
 
@@ -33,25 +36,18 @@ ul.sc_menu {
     font-size: 12px;
     color: #000000;
 }
-.sc_menu a:hover span {
+
+.scroll-horizontal a:hover span {
     display: block;
 }
-.sc_menu img {
+
+.scroll-horizontal img {
     border: 3px #fff solid;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
-.sc_menu a:hover img {
+
+.scroll-horizontal a:hover img {
     filter:alpha(opacity=50);
     opacity: 0.5;
-}
-
-
-/* Here are styles for the back button, don't look at them */
-#back {
-    display: block;
-    width: 500px;
-    text-align: center;
-    color: #003469;
-    font-size: 16px;
 }

@@ -1,16 +1,63 @@
+// Navigation bar items
+var navigationBarItems = ["News", "Business", "Technology", "Science", "Sports", "Entertainment"];
+
+// News items
+// News items
 var newsList = [{
-    "id": 0,
+    "id": 1,
     "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
     "summary": "The truth about NASA’s moon exploration",
     "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
 }, {
-    "id": 1,
+    "id": 2,
     "title": "The truth about NASA’s moon exploration",
     "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
     "summary": "The truth about NASA’s moon exploration",
     "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
 },{
-    "id": 2,
+    "id": 3,
+    "title": "The truth about NASA’s moon exploration",
+    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
+    "summary": "The truth about NASA’s moon exploration",
+    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
+},{
+    "id": 4,
+    "title": "The truth about NASA’s moon exploration",
+    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
+    "summary": "The truth about NASA’s moon exploration",
+    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
+},{
+    "id": 5,
+    "title": "The truth about NASA’s moon exploration",
+    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
+    "summary": "The truth about NASA’s moon exploration",
+    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
+},{
+    "id": 6,
+    "title": "The truth about NASA’s moon exploration",
+    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
+    "summary": "The truth about NASA’s moon exploration",
+    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
+},{
+    "id": 7,
+    "title": "The truth about NASA’s moon exploration",
+    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
+    "summary": "The truth about NASA’s moon exploration",
+    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
+},{
+    "id": 8,
+    "title": "The truth about NASA’s moon exploration",
+    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
+    "summary": "The truth about NASA’s moon exploration",
+    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
+},{
+    "id": 9,
+    "title": "The truth about NASA’s moon exploration",
+    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
+    "summary": "The truth about NASA’s moon exploration",
+    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
+},{
+    "id": 10,
     "title": "The truth about NASA’s moon exploration",
     "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
     "summary": "The truth about NASA’s moon exploration",
@@ -20,7 +67,7 @@ var newsList = [{
 // pageinit event for first page
 // triggers only once
 // In Android $(document).on fires twice, so use $(document).one
-$(document).on("pageinit", "#newsListPage", function () {
+$(document).one("pageinit", "#newsListPage", function () {
 
     //// Set up string for adding <li/>
     //var li = "";
@@ -56,7 +103,7 @@ $(document).on("pageinit", "#newsListPage", function () {
     //    $(this).listview("refresh");
     //});
 
-    initNavigationBar();
+    //initNavigationBar();
     createCards();
 });
 
@@ -66,21 +113,21 @@ $(document).on("pageinit", "#newsListPage", function () {
 //pageinit will happen only once
 $(document).on("pagebeforeshow", "#details-page", function () {
 
-    //get from data - you put this here when the "a" wa clicked in the previous page
-    var info = $(this).data("info");
-    //string to put HTML in
-    var info_view = "";
-    //use for..in to iterate through object
-    for (var key in info) {
-        //Im using grid layout here.
-        //use any kind of layout you want.
-        //key is the key of the property in the object
-        //if obj = {name: 'k'}
-        //key = name, value = k
-        info_view += '<div class="ui-grid-a"><div class="ui-block-a"><div class="ui-bar field" style="font-weight : bold; text-align: left;">' + key + '</div></div><div class="ui-block-b"><div class="ui-bar value" style="width : 75%">' + info[key] + '</div></div></div>';
-    }
-    //add this to html
-    $(this).find("[data-role=content]").html(info_view);
+    ////get from data - you put this here when the "a" wa clicked in the previous page
+    //var info = $(this).data("info");
+    ////string to put HTML in
+    //var info_view = "";
+    ////use for..in to iterate through object
+    //for (var key in info) {
+    //    //Im using grid layout here.
+    //    //use any kind of layout you want.
+    //    //key is the key of the property in the object
+    //    //if obj = {name: 'k'}
+    //    //key = name, value = k
+    //    info_view += '<div class="ui-grid-a"><div class="ui-block-a"><div class="ui-bar field" style="font-weight : bold; text-align: left;">' + key + '</div></div><div class="ui-block-b"><div class="ui-bar value" style="width : 75%">' + info[key] + '</div></div></div>';
+    //}
+    ////add this to html
+    //$(this).find("[data-role=content]").html(info_view);
 });
 
 
@@ -90,11 +137,10 @@ function initNavigationBar() {
     //    'html':'<ul><li><a id="some">First</a></li></ul>'
     //}).appendTo("#newsListPage").navbar();
 
-    for (var i = 0; i < 10; i++)
-    {
+    for (var i = 0; i < navigationBarItems.length; i++) {
         $("<li/>")
-            .text("Dynamic")
-            .appendTo($("#customNavbarList"));
+            .text(navigationBarItems[i])
+            .appendTo($(".scroll-horizontal"));
     }
 }
 
@@ -154,10 +200,6 @@ function createCards() {
         '<p>' +  newsItem.summary + '</p>' +
         '</div>';
 
-        uiBlockA.append(tag);
-        //uiBlockB.append(tag);
-        //uiBlockC.append(tag);
-
         if (index % 3 == 0) {
             uiBlockA.append(tag);
         } else if (index % 3 == 1) {
@@ -166,10 +208,6 @@ function createCards() {
             uiBlockC.append(tag);
         }
     });
-}
-
-function scrollCustomNavbar() {
-
 }
 
 // press effect card ui
