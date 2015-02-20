@@ -123,7 +123,7 @@ function showNewsCards(newsList, titleText) {
         }
 
         // We have added the card to the corresponding UI block, now show it slowly
-        $("#" + cardId).show('slow');
+        $("#" + cardId).fadeIn('slow');
 
         setTransitionDetailsForCards(cardId, newsItem);
     });

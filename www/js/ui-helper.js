@@ -122,8 +122,9 @@ function showNewsCards(newsList, titleText) {
             uiBlockC.append(tag)
         }
 
-        // We have added the card to the corresponding UI block, now show it slowly
-        $("#" + cardId).show('slow');
+        // We have added the card to the corresponding UI block, now fade in it slowly
+        //$("#" + cardId).show('slow'); // Another animation effect, commenting out for future reference
+        $("#" + cardId).fadeIn('slow');
 
         setTransitionDetailsForCards(cardId, newsItem);
     });
