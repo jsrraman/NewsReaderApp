@@ -1,0 +1,53 @@
+div.scroll-horizontal {
+    position: relative;
+    /*height: 145px;*/
+    /*width: 300px;*/
+    overflow: auto;
+    background: none;
+}
+
+.scroll-horizontal.ui-header.ui-bar-a {}
+
+ul.scroll-horizontal {
+    display: block;
+    /*height: 110px;*/
+    width: 750px;
+    padding: 10px 10px 10px 10px;
+    margin: 0;
+    list-style: none;
+}
+
+.scroll-horizontal li {
+    display: block;
+    float: left;
+    padding: 0 4px 4px;
+}
+
+.scroll-horizontal a {
+    display: block;
+    text-decoration: none;
+}
+
+.scroll-horizontal span {
+    /* display: none; */
+    margin-top: 3px;
+
+    text-align: center;
+    font-size: 12px;
+    color: #000000;
+}
+
+.scroll-horizontal a:hover span {
+    display: block;
+}
+
+.scroll-horizontal img {
+    border: 3px #fff solid;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.scroll-horizontal a:hover img {
+    filter:alpha(opacity=50);
+    opacity: 0.5;
+}
