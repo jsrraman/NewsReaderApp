@@ -119,3 +119,47 @@ var businessList = [{
     "detail": "India's gold imports are likely to rise to 35-40 tonnes in the current month as compared to 26 tonnes in the corresponding period last year, according to gold and silver refiner." +
     "The country has already imported 23.2 tonnes of gold in the first fortnight of this month. Total shipments at the end of the month could reach 35-40 tonnes."
 }];
+
+// Technology
+// Business
+var technologyList = [{
+    "category" : "Technology",
+    "id": 1,
+    "thumbnailUrl": "http://static.ibnlive.in.com/ibnlive/pix/sitepix/02_2015/moto-maxx-200215.jpg",
+    "summary": "Motorola’s Moto Maxx coming to India soon, teases Flipkart",
+    "detail": "Motorola is in all likelihood bringing the battery-packed Moto Maxx (a global variant of the Motorola Droid Turbo) to India soon. Motorola’s India sales partner Flipkart, in a tweet teased about an upcoming Moto device that given by the little details provided, point to the Moto Maxx." +
+    "<br>" + "<br>" +
+    "There’s a Moto beast coming your way exclusively on Flipkart. Stay tuned for more details, tweeted Flipkart with the image in the tweet mentioning “turbocharged” and “ballistic nylon fairing.”"
+}, {
+    "category" : "Technology",
+    "id": 1,
+    "thumbnailUrl": "http://static.ibnlive.in.com/ibnlive/pix/sitepix/02_2015/moto-maxx-200215.jpg",
+    "summary": "Motorola’s Moto Maxx coming to India soon, teases Flipkart",
+    "detail": "Motorola is in all likelihood bringing the battery-packed Moto Maxx (a global variant of the Motorola Droid Turbo) to India soon. Motorola’s India sales partner Flipkart, in a tweet teased about an upcoming Moto device that given by the little details provided, point to the Moto Maxx." +
+    "<br>" + "<br>" +
+    "There’s a Moto beast coming your way exclusively on Flipkart. Stay tuned for more details, tweeted Flipkart with the image in the tweet mentioning “turbocharged” and “ballistic nylon fairing.”"
+},{
+    "category" : "Technology",
+    "id": 1,
+    "thumbnailUrl": "http://static.ibnlive.in.com/ibnlive/pix/sitepix/02_2015/moto-maxx-200215.jpg",
+    "summary": "Motorola’s Moto Maxx coming to India soon, teases Flipkart",
+    "detail": "Motorola is in all likelihood bringing the battery-packed Moto Maxx (a global variant of the Motorola Droid Turbo) to India soon. Motorola’s India sales partner Flipkart, in a tweet teased about an upcoming Moto device that given by the little details provided, point to the Moto Maxx." +
+    "<br>" + "<br>" +
+    "There’s a Moto beast coming your way exclusively on Flipkart. Stay tuned for more details, tweeted Flipkart with the image in the tweet mentioning “turbocharged” and “ballistic nylon fairing.”"
+},{
+    "category" : "Technology",
+    "id": 1,
+    "thumbnailUrl": "http://static.ibnlive.in.com/ibnlive/pix/sitepix/02_2015/moto-maxx-200215.jpg",
+    "summary": "Motorola’s Moto Maxx coming to India soon, teases Flipkart",
+    "detail": "Motorola is in all likelihood bringing the battery-packed Moto Maxx (a global variant of the Motorola Droid Turbo) to India soon. Motorola’s India sales partner Flipkart, in a tweet teased about an upcoming Moto device that given by the little details provided, point to the Moto Maxx." +
+    "<br>" + "<br>" +
+    "There’s a Moto beast coming your way exclusively on Flipkart. Stay tuned for more details, tweeted Flipkart with the image in the tweet mentioning “turbocharged” and “ballistic nylon fairing.”"
+},{
+    "category" : "Technology",
+    "id": 1,
+    "thumbnailUrl": "http://static.ibnlive.in.com/ibnlive/pix/sitepix/02_2015/moto-maxx-200215.jpg",
+    "summary": "Motorola’s Moto Maxx coming to India soon, teases Flipkart",
+    "detail": "Motorola is in all likelihood bringing the battery-packed Moto Maxx (a global variant of the Motorola Droid Turbo) to India soon. Motorola’s India sales partner Flipkart, in a tweet teased about an upcoming Moto device that given by the little details provided, point to the Moto Maxx." +
+    "<br>" + "<br>" +
+    "There’s a Moto beast coming your way exclusively on Flipkart. Stay tuned for more details, tweeted Flipkart with the image in the tweet mentioning “turbocharged” and “ballistic nylon fairing.”"
+}];

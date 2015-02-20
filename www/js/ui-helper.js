@@ -60,8 +60,14 @@ function constructNavigationHeader() {
             showNewsCards(newsList, headerItem);
         else if(headerItem == "Business")
             showNewsCards(businessList, headerItem);
-        else
+        else if(headerItem == "Technology")
+            showNewsCards(technologyList, headerItem);
+        else if(headerItem == "Science")
             showNewsCards(headlinesList, headerItem);
+        else if(headerItem == "Sports")
+            showNewsCards(newsList, headerItem);
+        else if(headerItem == "Entertainment")
+            showNewsCards(businessList, headerItem);
     });
 }
 

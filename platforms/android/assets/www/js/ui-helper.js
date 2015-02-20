@@ -38,13 +38,19 @@ function constructNavigationHeader() {
     for (var i = 0; i < navigationHeaderItems.length; i++) {
         $("<li/>")
             .text(navigationHeaderItems[i])
+            .addClass("hscroll-list-li" + i)
             .appendTo($(".hscroll-list"));
     }
 
     // Show news cards based on the list item clicked
     $(".hscroll-list li").on("click", function(event){
 
-        $(this).addClass('animated shake');
+        // Get the clicked element's class name
+        var className = $(this).attr("class");
+
+        // Apply the animation
+        // Note add "." before classname for jQuery to recognize this element as class selector
+        animateFlashElement("." + className);
 
         var headerItem = $(this).text();
 
@@ -54,8 +60,14 @@ function constructNavigationHeader() {
             showNewsCards(newsList, headerItem);
         else if(headerItem == "Business")
             showNewsCards(businessList, headerItem);
-        else
+        else if(headerItem == "Technology")
+            showNewsCards(technologyList, headerItem);
+        else if(headerItem == "Science")
             showNewsCards(headlinesList, headerItem);
+        else if(headerItem == "Sports")
+            showNewsCards(newsList, headerItem);
+        else if(headerItem == "Entertainment")
+            showNewsCards(businessList, headerItem);
     });
 }
 
@@ -88,7 +100,8 @@ function showNewsCards(newsList, titleText) {
         // Construct the content that goes into each card
         var cardId = "card" + index;
 
-        tag = '<div class="card" id="' + cardId + '">' +
+        // Set the top level card display style as hidden deliberately
+        tag = '<div class="card" id="' + cardId + '" style="display:none;">' +
         '<div class="card-image"><img src="' + newsItem.thumbnailUrl + '" />' + '</div>' +
         '<p>' +  newsItem.summary + '</p>' +
         '</div>';
@@ -106,8 +119,11 @@ function showNewsCards(newsList, titleText) {
         } else if (index % 3 == 1) {
             uiBlockB.append(tag);
         } else if (index % 3 == 2) {
-            uiBlockC.append(tag);
+            uiBlockC.append(tag)
         }
+
+        // We have added the card to the corresponding UI block, now show it slowly
+        $("#" + cardId).show('slow');
 
         setTransitionDetailsForCards(cardId, newsItem);
     });
@@ -123,4 +139,17 @@ function setTransitionDetailsForCards(id, newsItem) {
             data: {"thumbnailUrl": newsItem.thumbnailUrl, "detail": encodeURIComponent(newsItem.detail)}
         });
     });
+}
+
+// Animation related helper methods
+
+// Change the background of the given div element
+function animateChangeBkgd(divElem) {
+    $(divElem).stop().css("background-color", "#FFFF9C")
+        .animate({backgroundColor: "#FFFFFF"}, 100);
+}
+
+// Flash the given div element
+function animateFlashElement(divElem) {
+    $(divElem).fadeIn(100).fadeOut(100).fadeIn(100);
 }
