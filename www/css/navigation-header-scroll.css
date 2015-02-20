@@ -1,4 +1,4 @@
-div.scroll-horizontal {
+div.hscroll-header {
     position: relative;
     /*height: 145px;*/
     /*width: 300px;*/
@@ -6,9 +6,7 @@ div.scroll-horizontal {
     background: none;
 }
 
-.scroll-horizontal.ui-header.ui-bar-a {}
-
-ul.scroll-horizontal {
+ul.hscroll-list {
     display: block;
     /*height: 110px;*/
     width: 750px;
@@ -17,18 +15,18 @@ ul.scroll-horizontal {
     list-style: none;
 }
 
-.scroll-horizontal li {
+.hscroll-list li {
     display: block;
     float: left;
     padding: 0 4px 4px;
 }
 
-.scroll-horizontal a {
+.hscroll-list a {
     display: block;
     text-decoration: none;
 }
 
-.scroll-horizontal span {
+.hscroll-list span {
     /* display: none; */
     margin-top: 3px;
 
@@ -37,17 +35,17 @@ ul.scroll-horizontal {
     color: #000000;
 }
 
-.scroll-horizontal a:hover span {
+.hscroll-list a:hover span {
     display: block;
 }
 
-.scroll-horizontal img {
+.hscroll-list img {
     border: 3px #fff solid;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
 
-.scroll-horizontal a:hover img {
+.hscroll-list a:hover img {
     filter:alpha(opacity=50);
     opacity: 0.5;
 }

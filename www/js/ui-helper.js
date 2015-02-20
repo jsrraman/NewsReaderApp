@@ -1,69 +1,3 @@
-// Navigation bar items
-var navigationBarItems = ["News", "Business", "Technology", "Science", "Sports", "Entertainment"];
-
-// News items
-// News items
-var newsList = [{
-    "id": 1,
-    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
-    "summary": "The truth about NASA’s moon exploration",
-    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
-}, {
-    "id": 2,
-    "title": "The truth about NASA’s moon exploration",
-    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
-    "summary": "The truth about NASA’s moon exploration",
-    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
-},{
-    "id": 3,
-    "title": "The truth about NASA’s moon exploration",
-    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
-    "summary": "The truth about NASA’s moon exploration",
-    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
-},{
-    "id": 4,
-    "title": "The truth about NASA’s moon exploration",
-    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
-    "summary": "The truth about NASA’s moon exploration",
-    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
-},{
-    "id": 5,
-    "title": "The truth about NASA’s moon exploration",
-    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
-    "summary": "The truth about NASA’s moon exploration",
-    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
-},{
-    "id": 6,
-    "title": "The truth about NASA’s moon exploration",
-    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
-    "summary": "The truth about NASA’s moon exploration",
-    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
-},{
-    "id": 7,
-    "title": "The truth about NASA’s moon exploration",
-    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
-    "summary": "The truth about NASA’s moon exploration",
-    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
-},{
-    "id": 8,
-    "title": "The truth about NASA’s moon exploration",
-    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
-    "summary": "The truth about NASA’s moon exploration",
-    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
-},{
-    "id": 9,
-    "title": "The truth about NASA’s moon exploration",
-    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
-    "summary": "The truth about NASA’s moon exploration",
-    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
-},{
-    "id": 10,
-    "title": "The truth about NASA’s moon exploration",
-    "thumbnailUrl": "http://farm6.staticflickr.com/5323/9902848784_cbd10ba3ca_c.jpg",
-    "summary": "The truth about NASA’s moon exploration",
-    "detail": "About 46 years ago, NASA detected two lifeforms on the Moon. These lifeforms were able to use sophisticated technology, as NASA could easily verify from their audio and video transmissions that we intercepted. I’ve actually seen the video, and the beings seemed humanoid to me, but quite frankly, I think it’s hard to say for sure because of the bulky protective shielding they were wearing at all times"
-}];
-
 // pageinit event for first page
 // triggers only once
 // In Android $(document).on fires twice, so use $(document).one
@@ -73,7 +7,7 @@ $(document).one("pageinit", "#newsListPage", function () {
     //var li = "";
     //
     //// Container for $li to be added
-    //$.each(newsList, function (index, newsItem) {
+    //$.each(headlinesList, function (index, newsItem) {
     //    //add the <li> to "li" variable
     //    //note the use of += in the variable
     //    //meaning I'm adding to the existing data. not replacing it.
@@ -103,8 +37,8 @@ $(document).one("pageinit", "#newsListPage", function () {
     //    $(this).listview("refresh");
     //});
 
-    //initNavigationBar();
-    createCards();
+    constructNavigationHeader();
+    //showNewsCards(newsList);
 });
 
 //use pagebeforeshow
@@ -131,21 +65,34 @@ $(document).on("pagebeforeshow", "#details-page", function () {
 });
 
 
-function initNavigationBar() {
-    //var myNavBar = $('div', {
-    //    'data-role':'navbar',
-    //    'html':'<ul><li><a id="some">First</a></li></ul>'
-    //}).appendTo("#newsListPage").navbar();
+function constructNavigationHeader() {
 
-    for (var i = 0; i < navigationBarItems.length; i++) {
+    // Append the individual list items to the list which makes up as header
+    for (var i = 0; i < navigationHeaderItems.length; i++) {
         $("<li/>")
-            .text(navigationBarItems[i])
-            .appendTo($(".scroll-horizontal"));
+            .text(navigationHeaderItems[i])
+            .appendTo($(".hscroll-list"));
     }
+
+    // Show news cards based on the list item clicked
+    $(".hscroll-list li").on("click", function(event){
+
+        var headerItem = $(this).text();
+
+        if (headerItem == "Headlines")
+            showNewsCards(headlinesList);
+        else if(headerItem == "News")
+            showNewsCards(newsList);
+    });
 }
 
 // function to create the cards
-function createCards() {
+function showNewsCards(newsList) {
+
+    // If newsList point it to the default news list
+    if (!newsList) {
+        newsList = headlinesList;
+    }
 
     // declaring some variables
     var uiBlockA = $('#uiBlockA'), // cache the selector of the element, increases performance
@@ -160,39 +107,7 @@ function createCards() {
     uiBlockB.empty();
     uiBlockC.empty();
 
-    //// the loop to get the values from the arrays
-    //for (i = 0; i < 3; i = i + 1) {
-    //    tag = '<div class="card" id="card' + i + '">' +
-    //    '<div class="card-image"><img alt="' + imagename[i] + '" src="' + imagesource[i] + '" />' + '</div>' +
-    //    '<p>' +  text[i] + '</p>' +
-    //    '</div>';
-    //
-    //    /*	You will need to create cards in a special order.
-    //     The first 1/3 of the cards are placed in block A.
-    //     The second 1/3 of the cards are placed in block B.
-    //     The last 1/3 of the cards are placed in block C.
-    //
-    //     This will make sure that the cards will fill white spots
-    //     when the screen is changing orientation and/or size.
-    //
-    //     When you create new block for every card you would get
-    //     an interface that is lined like a table.
-    //     */
-    //    //if (i < (result.rows.length / 3)) {
-    //    //    exampleBlockA.append(tag);
-    //    //} else if (i < ((result.rows.length / 3) * 2)) {
-    //    //    exampleBlockB.append(tag);
-    //    //} else if (i <= ((result.rows.length / 3) * 3)) {
-    //    //    exampleBlockC.append(tag);
-    //    //}
-    //
-    //    uiBlockA.append(tag);
-    //
-    //    // add a press effect to the card
-    //    pressEffectCard('card' + i);
-    //}
-
-    // Populate the values from newsList
+    // Populate the values from headlinesList
     $.each(newsList, function (index, newsItem) {
         // Construct the tag that goes into each card
         tag = '<div class="card" id="card' + index + '">' +
@@ -200,6 +115,14 @@ function createCards() {
         '<p>' +  newsItem.summary + '</p>' +
         '</div>';
 
+        // You will need to create cards in a special order.
+        // The first 1/3 of the cards are placed in block A.
+        // The second 1/3 of the cards are placed in block B.
+        // The last 1/3 of the cards are placed in block C.
+        //
+        // This will make sure that the cards will fill white spots
+        // when the screen is changing orientation and/or size.
+        //
         if (index % 3 == 0) {
             uiBlockA.append(tag);
         } else if (index % 3 == 1) {
