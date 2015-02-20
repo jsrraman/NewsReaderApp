@@ -94,7 +94,8 @@ function showNewsCards(newsList, titleText) {
         // Construct the content that goes into each card
         var cardId = "card" + index;
 
-        tag = '<div class="card" id="' + cardId + '">' +
+        // Set the top level card display style as hidden deliberately
+        tag = '<div class="card" id="' + cardId + '" style="display:none;">' +
         '<div class="card-image"><img src="' + newsItem.thumbnailUrl + '" />' + '</div>' +
         '<p>' +  newsItem.summary + '</p>' +
         '</div>';
@@ -112,8 +113,11 @@ function showNewsCards(newsList, titleText) {
         } else if (index % 3 == 1) {
             uiBlockB.append(tag);
         } else if (index % 3 == 2) {
-            uiBlockC.append(tag);
+            uiBlockC.append(tag)
         }
+
+        // We have added the card to the corresponding UI block, now show it slowly
+        $("#" + cardId).show('slow');
 
         setTransitionDetailsForCards(cardId, newsItem);
     });
