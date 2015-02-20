@@ -38,13 +38,19 @@ function constructNavigationHeader() {
     for (var i = 0; i < navigationHeaderItems.length; i++) {
         $("<li/>")
             .text(navigationHeaderItems[i])
+            .addClass("hscroll-list-li" + i)
             .appendTo($(".hscroll-list"));
     }
 
     // Show news cards based on the list item clicked
     $(".hscroll-list li").on("click", function(event){
 
-        $(this).addClass('animated shake');
+        // Get the clicked element's class name
+        var className = $(this).attr("class");
+
+        // Apply the animation
+        // Note add "." before classname for jQuery to recognize this element as class selector
+        animateFlashElement("." + className);
 
         var headerItem = $(this).text();
 
@@ -123,4 +129,17 @@ function setTransitionDetailsForCards(id, newsItem) {
             data: {"thumbnailUrl": newsItem.thumbnailUrl, "detail": encodeURIComponent(newsItem.detail)}
         });
     });
+}
+
+// Animation related helper methods
+
+// Change the background of the given div element
+function animateChangeBkgd(divElem) {
+    $(divElem).stop().css("background-color", "#FFFF9C")
+        .animate({backgroundColor: "#FFFFFF"}, 100);
+}
+
+// Flash the given div element
+function animateFlashElement(divElem) {
+    $(divElem).fadeIn(100).fadeOut(100).fadeIn(100);
 }
