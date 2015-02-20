@@ -1,18 +1,14 @@
-// pageinit event for first page
-// triggers only once
+// Construct the news list page's UI elements during its initialization
 // In Android $(document).on fires twice, so use $(document).one
 $(document).one("pageinit", "#newsListPage", function () {
-    // Construct the navigation header
+    // Construct the news header items
     constructNavigationHeader();
 
-    // Show headlines news cards
+    // Show headlines news cards as default news
     showNewsCards(headlinesList);
 });
 
-//use pagebeforeshow
-//DONT USE PAGEINIT!
-//the reason is you want this to happen every single time
-//pageinit will happen only once
+// Construct the news detail page before it is displayed
 $(document).on("pagebeforeshow", "#newsDetailPage", function (event, data) {
 
     // Get the passed data from the url parameters
@@ -54,6 +50,8 @@ function constructNavigationHeader() {
             showNewsCards(headlinesList);
         else if(headerItem == "News")
             showNewsCards(newsList);
+        else if(headerItem == "Business")
+            showNewsCards(businessList);
     });
 }
 
@@ -78,9 +76,8 @@ function showNewsCards(newsList) {
 
     // Populate the values from headlinesList
     $.each(newsList, function (index, newsItem) {
-        // Construct the content that goes into each card
 
-        //tag = '<div class="card" id="card' + index + '">' +
+        // Construct the content that goes into each card
         var cardId = "card" + index;
 
         tag = '<div class="card" id="' + cardId + '">' +
@@ -88,7 +85,7 @@ function showNewsCards(newsList) {
         '<p>' +  newsItem.summary + '</p>' +
         '</div>';
 
-        // You will need to create cards in a special order.
+        // The cards are in 33%, 33% and 33% layout, so we will need to create cards in the following order
         // The first 1/3 of the cards are placed in block A.
         // The second 1/3 of the cards are placed in block B.
         // The last 1/3 of the cards are placed in block C.
