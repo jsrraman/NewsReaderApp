@@ -70,21 +70,25 @@ $(document).on("pageinit", "#newsListPage", function () {
 //pageinit will happen only once
 $(document).on("pagebeforeshow", "#details-page", function () {
 
-    //get from data - you put this here when the "a" wa clicked in the previous page
-    var info = $(this).data("info");
-    //string to put HTML in
-    var info_view = "";
-    //use for..in to iterate through object
-    for (var key in info) {
-        //Im using grid layout here.
-        //use any kind of layout you want.
-        //key is the key of the property in the object
-        //if obj = {name: 'k'}
-        //key = name, value = k
-        info_view += '<div class="ui-grid-a"><div class="ui-block-a"><div class="ui-bar field" style="font-weight : bold; text-align: left;">' + key + '</div></div><div class="ui-block-b"><div class="ui-bar value" style="width : 75%">' + info[key] + '</div></div></div>';
-    }
-    //add this to html
-    $(this).find("[data-role=content]").html(info_view);
+    //myScroll = new IScroll('#wrapper', { scrollX: true, scrollY: false, mouseWheel: true });
+    //
+    //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+    ////get from data - you put this here when the "a" wa clicked in the previous page
+    //var info = $(this).data("info");
+    ////string to put HTML in
+    //var info_view = "";
+    ////use for..in to iterate through object
+    //for (var key in info) {
+    //    //Im using grid layout here.
+    //    //use any kind of layout you want.
+    //    //key is the key of the property in the object
+    //    //if obj = {name: 'k'}
+    //    //key = name, value = k
+    //    info_view += '<div class="ui-grid-a"><div class="ui-block-a"><div class="ui-bar field" style="font-weight : bold; text-align: left;">' + key + '</div></div><div class="ui-block-b"><div class="ui-bar value" style="width : 75%">' + info[key] + '</div></div></div>';
+    //}
+    ////add this to html
+    //$(this).find("[data-role=content]").html(info_view);
 });
 
 
@@ -156,10 +160,6 @@ function createCards() {
         '<div class="card-image"><img src="' + newsItem.thumbnailUrl + '" />' + '</div>' +
         '<p>' +  newsItem.summary + '</p>' +
         '</div>';
-
-        uiBlockA.append(tag);
-        //uiBlockB.append(tag);
-        //uiBlockC.append(tag);
 
         if (index % 3 == 0) {
             uiBlockA.append(tag);
