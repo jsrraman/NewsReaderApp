@@ -26,8 +26,8 @@ $(document).on("pagebeforeshow", "#newsDetailPage", function (event, data) {
     //string to put HTML in
     var htmlData = "";
 
-    htmlData += '<h2 style="text-align:left">' + summary + '</h2>';
     htmlData += '<div class="global-image"><img src="' + thumbnailUrl + '" />' + '</div>';
+    htmlData += '<h2 style="text-align:left">' + summary + '</h2>';
     htmlData += '<p>' +  detail + '</p>';
 
     // Add the html data to the content area
