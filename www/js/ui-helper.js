@@ -16,14 +16,17 @@ $(document).on("pagebeforeshow", "#newsDetailPage", function (event, data) {
     var parameterValueArray = parameters.split("&");
 
     var thumbnailUrl = parameterValueArray[0].replace("thumbnailUrl=", "");
-    var detail = parameterValueArray[1].replace("detail=", "");
+    var summary = parameterValueArray[1].replace("summary=", "");
+    var detail = parameterValueArray[2].replace("detail=", "");
 
     // Decode the URI component to get the proper string
+    summary = decodeURIComponent(summary);
     detail = decodeURIComponent(detail);
 
     //string to put HTML in
     var htmlData = "";
 
+    htmlData += '<h2 style="text-align:left">' + summary + '</h2>';
     htmlData += '<div class="global-image"><img src="' + thumbnailUrl + '" />' + '</div>';
     htmlData += '<p>' +  detail + '</p>';
 
@@ -137,7 +140,8 @@ function setTransitionDetailsForCards(id, newsItem) {
     id.off('click').on('click', function () {
         $.mobile.changePage('news-detail.html', {
             transition: "flip",
-            data: {"thumbnailUrl": newsItem.thumbnailUrl, "detail": encodeURIComponent(newsItem.detail)}
+            data: {"thumbnailUrl": newsItem.thumbnailUrl, "summary": encodeURIComponent(newsItem.summary),
+                                                                "detail": encodeURIComponent(newsItem.detail)}
         });
     });
 }
