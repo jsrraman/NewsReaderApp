@@ -1,10 +1,12 @@
 # Generated files
-**/platforms/android/ant-build
-**/platforms/android/ant-gen
+platforms/android/ant-build/
+platforms/android/ant-gen/
 
 # Mac OS default file
 .DS_Store
+.idea
 
 # IntelliJ specific files
 **/.idea/workspace.xml
 **/.idea/tasks.xml
+
