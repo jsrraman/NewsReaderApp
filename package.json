@@ -1,6 +1,6 @@
 {
   "name": "NewsReaderApp",
   "devDependencies": {
-    "cordova": "*"
+    "cordova": "4.3"
   }
 }
