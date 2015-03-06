@@ -22,7 +22,7 @@ package com.rajaraman.newsreader;
 import android.os.Bundle;
 import org.apache.cordova.*;
 
-public class CordovaApp extends CordovaActivity
+public class NewsReader extends CordovaActivity
 {
     @Override
     public void onCreate(Bundle savedInstanceState)
